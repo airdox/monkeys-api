@@ -1,1 +1,1 @@
-web: vendor/bin/heraku-php-apache2 public
+web: vendor/bin/heraku-php-apache2 public/
