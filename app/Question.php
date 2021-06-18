@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class Question extends Model
 {
     use Notifiable;
 
@@ -15,7 +15,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'email'
+        'question'
     ];
 
     /**
@@ -23,7 +23,9 @@ class User extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'password'
+    ];
 
     /**
      * The attributes that should be cast to native types.
@@ -31,9 +33,4 @@ class User extends Model
      * @var array
      */
     protected $casts = [];
-
-    public function response()
-    {
-        return $this->belongsToMany(Response::class);
-    }
 }

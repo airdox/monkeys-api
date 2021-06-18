@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class Response extends Model
 {
     use Notifiable;
 
@@ -15,7 +15,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'email'
+        'response'
     ];
 
     /**
@@ -32,8 +32,8 @@ class User extends Model
      */
     protected $casts = [];
 
-    public function response()
+    public function users()
     {
-        return $this->belongsToMany(Response::class);
+        return $this->belongsToMany(User::class);
     }
 }
