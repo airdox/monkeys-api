@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users/list', 'UserController@list');
+Route::get('/users/add', function () {
+    return view('users/add');
+});
+Route::post('/users/add', 'UserController@add')->name('postData');
