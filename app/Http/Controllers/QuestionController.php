@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class User extends Controller
+class QuestionController extends Controller
 {
     public function add()
+    {
+    }
+
+    public function edit()
     {
     }
 
@@ -14,7 +18,11 @@ class User extends Controller
     {
     }
 
-    public function verifyEmailUnique()
+    public function delete()
+    {
+    }
+
+    public function listResponses()
     {
     }
 }

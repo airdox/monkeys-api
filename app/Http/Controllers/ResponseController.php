@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Question extends Controller
+class ResponseController extends Controller
 {
     public function add()
     {
@@ -22,7 +22,7 @@ class Question extends Controller
     {
     }
 
-    public function listResponses()
+    public function questionRelated()
     {
     }
 }
