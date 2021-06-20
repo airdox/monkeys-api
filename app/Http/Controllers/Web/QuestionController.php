@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ResponseController extends Controller
+class QuestionController extends Controller
 {
     public function add()
     {
@@ -22,7 +23,7 @@ class ResponseController extends Controller
     {
     }
 
-    public function questionRelated()
+    public function listResponses()
     {
     }
 }
