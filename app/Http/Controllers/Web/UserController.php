@@ -15,13 +15,13 @@ class UserController extends Controller
             'email' => $request->email,
         ]);
 
-        return redirect('/users/add');
+        return redirect('/user/add');
     }
 
     public function list()
     {
         $user = new User();
-        return view('users/list', ['users' => $user->all()]);
+        return view('user/list', ['users' => $user->all()]);
     }
 
     public function verifyEmailUnique()
