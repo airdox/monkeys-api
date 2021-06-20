@@ -25,7 +25,14 @@ Route::get('/users/add', function () {
 })->middleware('auth');
 Route::post('/users/add', 'UserController@add')->name('postData')->middleware('auth');
 
-Auth::routes();
+Auth::routes([
+    'login'    => true,
+    'logout'   => true,
+    'register' => false,
+    'reset'    => false,   // for resetting passwords
+    'confirm'  => false,  // for additional password confirmations
+    'verify'   => false,  // for email verification
+]);
 
 Route::get('/', 'HomeController@index')->name('home');
 
