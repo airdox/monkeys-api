@@ -15,15 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/users/list', 'UserController@list')->middleware('auth');
-Route::get('/users/add', function () {
-    return view('users/add');
+Route::get('/user/list', 'UserController@list')->middleware('auth');
+Route::get('/user/add', function () {
+    return view('user/add');
 })->middleware('auth');
-Route::post('/users/add', 'UserController@add')->name('postData')->middleware('auth');
+Route::post('/user/add', 'UserController@add')->name('postData')->middleware('auth');
 
 Auth::routes([
     'login'    => true,
