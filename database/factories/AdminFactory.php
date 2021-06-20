@@ -3,7 +3,6 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Admin;
-use Faker\Generator as Faker;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -18,7 +17,7 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Admin::class, function (Faker $faker) {
+$factory->define(Admin::class, function () {
     return [
         'name' => 'admin',
         'email' => 'admin@monkeys.com',
