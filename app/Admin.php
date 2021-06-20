@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authentificable;
 
-class Admin extends Model
+class Admin extends Authentificable
 {
     use Notifiable;
 
@@ -15,7 +17,7 @@ class Admin extends Model
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'email'
+        'email', 'name', 'password'
     ];
 
     /**
@@ -23,9 +25,7 @@ class Admin extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        'password'
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
