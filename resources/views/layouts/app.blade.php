@@ -69,6 +69,16 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{!! url('/user/list'); !!}">
+                                    Utilisateurs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{!! url('/question/list'); !!}">
+                                    Questions
+                                </a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
