@@ -21,4 +21,13 @@ class UserController extends Controller
             throw $th;
         }
     }
+
+    public function list()
+    {
+        try {
+            return response(User::all(), 200);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
 }

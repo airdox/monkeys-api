@@ -15,7 +15,7 @@ class Response extends Model
      * @var array
      */
     protected $fillable = [
-        'response'
+        'response', 'question_id'
     ];
 
     /**
