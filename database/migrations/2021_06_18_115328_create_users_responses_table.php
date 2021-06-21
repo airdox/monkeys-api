@@ -13,14 +13,14 @@ class CreateUsersResponsesTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_responses', function (Blueprint $table) {
+        Schema::create('response_user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_response');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('response_id');
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_response')->references('id')->on('responses');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('response_id')->references('id')->on('responses');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateUsersResponsesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_responses');
+        Schema::dropIfExists('response_user');
     }
 }

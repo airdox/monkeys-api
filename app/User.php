@@ -32,7 +32,7 @@ class User extends Model
      */
     protected $casts = [];
 
-    public function response()
+    public function responses()
     {
         return $this->belongsToMany(Response::class);
     }

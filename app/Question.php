@@ -23,9 +23,7 @@ class Question extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        'password'
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
