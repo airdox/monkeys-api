@@ -20,8 +20,7 @@ class UserController extends Controller
 
     public function list()
     {
-        $user = new User();
-        return view('user/list', ['users' => $user->all()]);
+        return view('user/list', ['users' => User::all()]);
     }
 
     public function verifyEmailUnique()

@@ -8,15 +8,15 @@ use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
-    public function add(Request $request)
+    public function list()
     {
         try {
 
-            Question::create([
-                'email' => $request->email,
-            ]);
+            $questions = Question::with('responses')->get();
+            // $questions = $questions->users();
 
-            return response('ok', 200);
+
+            return response($questions, 200);
         } catch (\Throwable $th) {
             throw $th;
         }
