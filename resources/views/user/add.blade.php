@@ -2,7 +2,8 @@
 
 @section('content')
 <h1>Add User</h1>
-<form method="post" action="{{ route('postData') }}">
+<a href='{!! url('/user/list'); !!}'>Retour</a>
+<form method="post" action="{{ route('postUser') }}">
     {{ csrf_field() }}
     <label for="email">Email</label><br>
     <input type="email" name="email"><br>

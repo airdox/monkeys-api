@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/user/add', 'UserController@add');
-Route::get('/question/list', 'QuestionController@list');
+Route::post('/user/add', 'API\UserController@add');
+Route::get('/user/list', 'API\UserController@list');
+Route::get('/question/list', 'API\QuestionController@list');
