@@ -18,7 +18,7 @@ class QuestionSeeder extends Seeder
                 'question' => 'C\'est une question ' . $i
             ]);
 
-            for ($y = 1; $y <= 5; $y++) {
+            for ($y = 1; $y <= 4; $y++) {
                 factory(Response::class)->create([
                     'question_id' => $i,
                     'response' => 'C\'est une réponse ' . $y

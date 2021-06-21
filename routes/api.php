@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/user/add', 'UserController@add');
+Route::get('/question/list', 'QuestionController@list');

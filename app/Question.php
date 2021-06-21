@@ -31,4 +31,9 @@ class Question extends Model
      * @var array
      */
     protected $casts = [];
+
+    public function responses()
+    {
+        return $this->hasMany(Response::class);
+    }
 }

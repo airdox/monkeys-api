@@ -18,8 +18,6 @@ class UserSeeder extends Seeder
 
             $questions = Question::all();
 
-            $responses = [];
-
             foreach ($questions as $key => $value) {
                 $response = Response::where('question_id', $value->id)->get()->random();
                 $user->responses()->attach([

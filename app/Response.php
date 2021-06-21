@@ -36,4 +36,9 @@ class Response extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function questions()
+    {
+        return $this->belongsTo(Question::class);
+    }
 }
