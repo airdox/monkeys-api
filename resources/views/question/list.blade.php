@@ -12,5 +12,5 @@
         </ul>
     @endforeach
 </ul>
-<a href='{!! url('/question/add'); !!}'>Ajouter</a>
+<a class="nav-link" href='{!! url('/question/add'); !!}'>Ajouter</a>
 @endsection

@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Add User</h1>
-<a href='{!! url('/user/list'); !!}'>Retour</a>
+<a class="nav-link" href='{!! url('/user/list'); !!}'>Retour</a>
 <form method="post" action="{{ route('postUser') }}">
     {{ csrf_field() }}
     <label for="email">Email</label><br>

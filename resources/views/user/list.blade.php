@@ -7,5 +7,5 @@
     <li>{{ $user->email }}</li>
     @endforeach
 </ul>
-<a href='{!! url('/user/add'); !!}'>Ajouter</a>
+<a class="nav-link" href='{!! url('/user/add'); !!}'>Ajouter</a>
 @endsection

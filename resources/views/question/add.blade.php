@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Add Question</h1>
-<a href='{!! url('/question/list'); !!}'>Retour</a>
+<a class="nav-link" href='{!! url('/question/list'); !!}'>Retour</a>
 <form method="post" action="{{ route('postQuestion') }}">
     {{ csrf_field() }}
     <label for="question">Question</label><br>
