@@ -3,7 +3,7 @@
 @section('content')
 <button class="btn btn-secondary return-button"  onclick="window.location.href='{!! url('/question/list'); !!}'">Retour</button>
 <h1>Ajout de question</h1>
-<form method="post" action="{{ route('postQuestion') }}">
+<form class="form-custom" method="post" action="{{ route('postQuestion') }}">
     {{ csrf_field() }}
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
