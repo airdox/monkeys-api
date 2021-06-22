@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::post('/user/add', 'UserController@add');
 Route::get('/user/list', 'UserController@list');
 Route::get('/question/list', 'QuestionController@list');
+Route::post('/response_user/add', 'ResponseUserController@add');
