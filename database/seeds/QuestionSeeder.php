@@ -13,15 +13,63 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i <= 5; $i++) {
+        $questions = [
+            [
+                'question' => 'D\'où viennent principalement vos idées recettes ?',
+                'responses' => [
+                    'Mes réseaux sociaux préférés',
+                    'Mes émissions favorites',
+                    'Le bon livre de recette',
+                    'Oups,je n\'ai jamais d\'idée'
+                ]
+            ],
+            [
+                'question' => 'Quelles sont vos habitudes alimentaires ?',
+                'responses' => [
+                    'J\'essaye de manger local !',
+                    'J\'aime la cuisine du monde',
+                    'Je suis un régime spécifique',
+                    'Je mange de tout !'
+                ]
+            ],
+            [
+                'question' => 'Où faites-vous principalement vos courses alimentaires ?',
+                'responses' => [
+                    'En grande surface',
+                    'J\'ai mes habitudes au marché',
+                    'Je me fais virer',
+                    'Le magasin du bout de la rue'
+                ]
+            ],
+            [
+                'question' => 'Les aliments périmés au frigo ça vous arrive ?',
+                'responses' => [
+                    'Assez souvent, malheuresement',
+                    'Rarement, heuresement',
+                    'Jamais, au grand jamais !',
+                    'Je ne sais pas'
+                ]
+            ],
+            [
+                'question' => 'Qui porte la toque à la maison ?',
+                'responses' => [
+                    'C\'est moi le chef !',
+                    'Je préfère déléguer...',
+                    'Une personne m\'aide à la maison',
+                    'Personne ne cuisine ici'
+                ]
+            ]
+        ];
+
+        foreach ($questions as $key => $question) {
             factory(Question::class)->create([
-                'question' => 'C\'est une question ' . $i
+                'question' => $question['question']
             ]);
 
-            for ($y = 1; $y <= 4; $y++) {
+            foreach ($question['responses'] as $response) {
                 factory(Response::class)->create([
-                    'question_id' => $i,
-                    'response' => 'C\'est une réponse ' . $y
+                    'question_id' => $key + 1,
+                    'response' => $response
                 ]);
             }
         }
