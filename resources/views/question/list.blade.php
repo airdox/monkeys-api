@@ -1,16 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>List Questions</h1>
-<ul>
-    @foreach ($questions as $question)
-        <li>{{ $question->question }}</li>
-        <ul>
-            @foreach ($question->responses as $response)
-            <li>{{ $response->response }}</li>
-            @endforeach
-        </ul>
+<h1>Liste des questions</h1>
+@foreach ($questions as $question)
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">{{ $question->question }}</th>
+        </tr>
+    </thead>
+    @foreach ($question->responses as $response)
+        <tr scope="row">
+            <td scope="col">{{ $response->response }}</td></tr>
     @endforeach
-</ul>
-<a class="nav-link" href='{!! url('/question/add'); !!}'>Ajouter</a>
+</table>
+@endforeach
+<button class="btn btn-success add-button"  onclick="window.location.href='{!! url('/question/add'); !!}'">Ajouter</button>
+
 @endsection

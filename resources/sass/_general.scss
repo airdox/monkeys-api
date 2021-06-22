@@ -1,0 +1,30 @@
+main, .form-custom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form .input-group {
+    margin: 20px 0;
+}
+
+.table {
+    width: 50vw;
+    background-color: white;
+}
+
+.responses_list {
+    margin-left: 100px;
+}
+
+.add-button{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
+
+.return-button{
+    align-self: flex-start;
+    margin-left: 5%;
+}
