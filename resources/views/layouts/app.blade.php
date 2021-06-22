@@ -10,9 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -20,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -37,7 +33,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                                <a class="nav-link" href="{!! url('/user/list'); !!}">
+                                    Utilisateurs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{!! url('/question/list'); !!}">
+                                    Questions
+                                </a>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -68,16 +73,6 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{!! url('/user/list'); !!}">
-                                    Utilisateurs
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{!! url('/question/list'); !!}">
-                                    Questions
-                                </a>
                             </li>
                         @endguest
                     </ul>
