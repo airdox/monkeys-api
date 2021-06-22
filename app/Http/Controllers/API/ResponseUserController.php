@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\ResponseUser;
+use App\User;
 use Illuminate\Http\Request;
 
 class ResponseUserController extends Controller
@@ -13,10 +14,18 @@ class ResponseUserController extends Controller
     {
         try {
 
+            User::create([
+                'email' => $request->email,
+            ]);
+
+            $user = User::select('id')
+                ->orderBy('id', 'DESC')
+                ->first();
+
             foreach ($request->responses as $response) {
                 ResponseUser::create([
                     'response_id' => $response,
-                    'user_id' => $request->user_id
+                    'user_id' => $user->id
                 ]);
             }
 
