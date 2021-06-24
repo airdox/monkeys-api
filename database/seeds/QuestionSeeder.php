@@ -20,13 +20,13 @@ class QuestionSeeder extends Seeder
                     'Mes réseaux sociaux préférés',
                     'Mes émissions favorites',
                     'Le bon livre de recette',
-                    'Oups,je n\'ai jamais d\'idée'
+                    'Oups, je n\'ai jamais d\'idée'
                 ]
             ],
             [
                 'question' => 'Quelles sont vos habitudes alimentaires ?',
                 'responses' => [
-                    'J\'essaye de manger local !',
+                    'Végétarien',
                     'J\'aime la cuisine du monde',
                     'Je suis un régime spécifique',
                     'Je mange de tout !'
@@ -37,15 +37,15 @@ class QuestionSeeder extends Seeder
                 'responses' => [
                     'En grande surface',
                     'J\'ai mes habitudes au marché',
-                    'Je me fais virer',
+                    'Je me fais livrer',
                     'Le magasin du bout de la rue'
                 ]
             ],
             [
                 'question' => 'Les aliments périmés au frigo ça vous arrive ?',
                 'responses' => [
-                    'Assez souvent, malheuresement',
-                    'Rarement, heuresement',
+                    'Assez souvent, malheureusement',
+                    'Rarement, heureusement',
                     'Jamais, au grand jamais !',
                     'Je ne sais pas'
                 ]
